@@ -1,0 +1,11 @@
+{
+  "duration": 141.895996,
+  "videoWidth": 1280,
+  "videoHeight": 720,
+  "ended": true,
+  "decodedFrames": 3405,
+  "droppedFrames": 0,
+  "audioPeak": 0.8588141202926636,
+  "audioSamples": 1419,
+  "error": null
+}

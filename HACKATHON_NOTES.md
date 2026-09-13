@@ -2,6 +2,18 @@
 
 Updated: 2026-09-13. This is the current handoff; it supersedes earlier setup-status notes. Older references to “Kiez Diary” in PLAN.md and AGENTS.md describe the same project under its previous name.
 
+## Submission materials update — 2026-09-13
+
+- `docs/PROJECT_ONE_PAGER.md` now centers the wiki-style shared page, the stack with only today’s latest note visible, and the archive of summarized AI Chronicles. “New narratives” and “shared narrative” are central terms requested by the user.
+- The user uploaded `docs/Kiez_Notes_Presentation.pdf` as the slide submission. It contains five slides. Open the PDF in Mac Preview; the editor may display binary PDF data as text.
+- Video limit: three minutes. The user requested a synthetic female narrator and a static female avatar, explicitly without lip-sync.
+- `docs/Kiez_Notes_Project_Video.mp4` is the video export: approximately 2:22, 4.35 MB, 720p H.264/AAC. It integrates all five slides, current website screenshots, captions and a static illustrated presenter with an audio waveform. The user has not yet confirmed upload of the video.
+- Video narration uses OpenAI `gpt-4o-mini-tts` / `coral` after Gemini speech returned HTTP 500 and 429 responses. The app’s providers and configuration were not changed. The presenter is fictional and labeled “AI narrator.”
+- `docs/VIDEO_SPEC.md` contains the production plan. `docs/video-assets/README.md` records actual methods, assets, generation prompt and rebuild instructions. Video capture was read-only; no live contributions were created or removed.
+- The video decoded fully without warnings; automated transcription recovered the complete spoken script. Final browser playback results are saved in `docs/video-assets/playback-check.json`. No human listening review is claimed.
+
+The earlier presentation outlines below are retained as planning history; the materials listed above supersede their “not created yet” status.
+
 ## Current direction
 
 The user considers the deployed app ready to demo/showcase as a proof of concept. Keep the working product as it is for now. Next, create the presentation materials in this order:

@@ -1,0 +1,13 @@
+{
+  "text": "Every place has a story, but the people who share a street can experience it very differently. Keeds Notes explores how those everyday perspectives can become new narratives of a place, a shared narrative told by the people who are there. Start with the map, choose a neighborhood, and open its shared page. Residents, newcomers, and visitors can all read. To leave a written or spoken note, you confirm your location and choose a nickname. There are no accounts, profiles, likes, or followers. Think of it as a wiki-style page for a place. No single person owns what it says. Each new note goes on top of a stack and replaces the visible moment. Only today's latest note appears. Earlier notes remain stored beneath it, ready to become part of the neighborhood's memory. Past days take a different form. The Chronicle pipeline gathers a day's notes into one summarized story, narrated as I, the neighborhood. The aim is to preserve different moods and uncertainty. A lively canal can feel welcoming to one person and overwhelming to another. These chronicles form the archive. Empty days receive no invented story. People don't need to share a language to share a place. Spoken notes become transcripts that contributors review and edit before publishing. Original text and language are preserved. Readers can request translation or speech in English, German, Turkish, Arabic, and Spanish. Gemini supports these language and voice features. OpenAI powers Chronicle extraction, writing, and review. The prototype covers four Berlin neighborhoods and Hamburg's HafenCity. The demo archive contains labeled editorial stories. Live Chronicle generation has been rehearsed, with grounding and daily scheduling still to improve. Keeds Notes brings together a changing present and a shared memory. Explore the project and imagine what story your neighborhood could tell.",
+  "usage": {
+    "type": "tokens",
+    "total_tokens": 1777,
+    "input_tokens": 1424,
+    "input_token_details": {
+      "text_tokens": 0,
+      "audio_tokens": 1424
+    },
+    "output_tokens": 353
+  }
+}

@@ -1,0 +1,75 @@
+1
+00:00:00,000 --> 00:00:06,175
+Every place has a story. But the people who share a street can experience it very differently.
+
+2
+00:00:06,458 --> 00:00:15,647
+Kiez Notes explores how those everyday perspectives can become new narratives of a place—a shared narrative
+told by the people who are there.
+
+3
+00:00:15,917 --> 00:00:25,350
+Start with the map, choose a neighborhood, and open its shared page. Residents, newcomers and visitors can all
+read.
+
+4
+00:00:25,625 --> 00:00:34,093
+To leave a written or spoken note, you confirm your location and choose a nickname. There are no accounts,
+profiles, likes or followers.
+
+5
+00:00:34,375 --> 00:00:40,594
+Think of it as a wiki-style page for a place. No single person owns what it says.
+
+6
+00:00:40,875 --> 00:00:48,426
+Each new note goes on top of a stack and replaces the visible moment. Only today’s latest note appears.
+
+7
+00:00:48,708 --> 00:00:53,969
+Earlier notes remain stored beneath it, ready to become part of the neighborhood’s memory.
+
+8
+00:00:54,250 --> 00:01:04,207
+Past days take a different form. The Chronicle pipeline gathers a day’s notes into one summarized story, narrated
+as “I,” the neighborhood.
+
+9
+00:01:04,458 --> 00:01:14,128
+The aim is to preserve different moods and uncertainty: a lively canal can feel welcoming to one person and
+overwhelming to another.
+
+10
+00:01:14,417 --> 00:01:21,160
+These Chronicles form the archive. Empty days receive no invented story.
+
+11
+00:01:21,417 --> 00:01:24,979
+People don’t need to share a language to share a place.
+
+12
+00:01:25,250 --> 00:01:33,689
+Spoken notes become transcripts that contributors review and edit before publishing. Original text and language
+are preserved.
+
+13
+00:01:33,958 --> 00:01:40,881
+Readers can request translation or speech in English, German, Turkish, Arabic and Spanish.
+
+14
+00:01:41,167 --> 00:01:49,548
+Gemini supports these language and voice features; OpenAI powers Chronicle extraction, writing and review.
+
+15
+00:01:49,833 --> 00:01:55,091
+The prototype covers four Berlin neighborhoods and Hamburg’s HafenCity.
+
+16
+00:01:55,375 --> 00:02:06,108
+The demo archive contains labeled editorial stories; live Chronicle generation has been rehearsed, with grounding
+and daily scheduling still to improve.
+
+17
+00:02:06,375 --> 00:02:17,840
+Kiez Notes brings together a changing present and a shared memory. Explore the project, and imagine what story
+your neighborhood could tell.

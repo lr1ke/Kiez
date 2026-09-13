@@ -1,0 +1,158 @@
+{
+  "duration": 141.875,
+  "clips": [
+    {
+      "id": 1,
+      "scene": 1,
+      "text": "Every place has a story. But the people who share a street can experience it very differently.",
+      "file": "voice-01.wav",
+      "audio_duration": 6.1745833333333335,
+      "duration": 6.458333333333333,
+      "audio_path": "/private/tmp/kiez-video/render/audio-01.wav"
+    },
+    {
+      "id": 2,
+      "scene": 1,
+      "text": "Kiez Notes explores how those everyday perspectives can become new narratives of a place\u2014a shared narrative told by the people who are there.",
+      "file": "voice-02.wav",
+      "audio_duration": 9.1885,
+      "duration": 9.458333333333334,
+      "audio_path": "/private/tmp/kiez-video/render/audio-02.wav"
+    },
+    {
+      "id": 3,
+      "scene": 2,
+      "text": "Start with the map, choose a neighborhood, and open its shared page. Residents, newcomers and visitors can all read.",
+      "file": "voice-03.wav",
+      "audio_duration": 9.433333333333334,
+      "duration": 9.708333333333334,
+      "audio_path": "/private/tmp/kiez-video/render/audio-03.wav"
+    },
+    {
+      "id": 4,
+      "scene": 2,
+      "text": "To leave a written or spoken note, you confirm your location and choose a nickname. There are no accounts, profiles, likes or followers.",
+      "file": "voice-04.wav",
+      "audio_duration": 8.468083333333333,
+      "duration": 8.75,
+      "audio_path": "/private/tmp/kiez-video/render/audio-04.wav"
+    },
+    {
+      "id": 5,
+      "scene": 3,
+      "text": "Think of it as a wiki-style page for a place. No single person owns what it says.",
+      "file": "voice-05.wav",
+      "audio_duration": 6.218708333333334,
+      "duration": 6.5,
+      "audio_path": "/private/tmp/kiez-video/render/audio-05.wav"
+    },
+    {
+      "id": 6,
+      "scene": 3,
+      "text": "Each new note goes on top of a stack and replaces the visible moment. Only today\u2019s latest note appears.",
+      "file": "voice-06.wav",
+      "audio_duration": 7.550625,
+      "duration": 7.833333333333333,
+      "audio_path": "/private/tmp/kiez-video/render/audio-06.wav"
+    },
+    {
+      "id": 7,
+      "scene": 3,
+      "text": "Earlier notes remain stored beneath it, ready to become part of the neighborhood\u2019s memory.",
+      "file": "voice-07.wav",
+      "audio_duration": 5.260458333333333,
+      "duration": 5.541666666666667,
+      "audio_path": "/private/tmp/kiez-video/render/audio-07.wav"
+    },
+    {
+      "id": 8,
+      "scene": 4,
+      "text": "Past days take a different form. The Chronicle pipeline gathers a day\u2019s notes into one summarized story, narrated as \u201cI,\u201d the neighborhood.",
+      "file": "voice-08.wav",
+      "audio_duration": 9.957166666666666,
+      "duration": 10.208333333333334,
+      "audio_path": "/private/tmp/kiez-video/render/audio-08.wav"
+    },
+    {
+      "id": 9,
+      "scene": 4,
+      "text": "The aim is to preserve different moods and uncertainty: a lively canal can feel welcoming to one person and overwhelming to another.",
+      "file": "voice-09.wav",
+      "audio_duration": 9.669208333333334,
+      "duration": 9.958333333333334,
+      "audio_path": "/private/tmp/kiez-video/render/audio-09.wav"
+    },
+    {
+      "id": 10,
+      "scene": 4,
+      "text": "These Chronicles form the archive. Empty days receive no invented story.",
+      "file": "voice-10.wav",
+      "audio_duration": 6.743708333333333,
+      "duration": 7.0,
+      "audio_path": "/private/tmp/kiez-video/render/audio-10.wav"
+    },
+    {
+      "id": 11,
+      "scene": 5,
+      "text": "People don\u2019t need to share a language to share a place.",
+      "file": "voice-11.wav",
+      "audio_duration": 3.562375,
+      "duration": 3.8333333333333335,
+      "audio_path": "/private/tmp/kiez-video/render/audio-11.wav"
+    },
+    {
+      "id": 12,
+      "scene": 5,
+      "text": "Spoken notes become transcripts that contributors review and edit before publishing. Original text and language are preserved.",
+      "file": "voice-12.wav",
+      "audio_duration": 8.438916666666668,
+      "duration": 8.708333333333334,
+      "audio_path": "/private/tmp/kiez-video/render/audio-12.wav"
+    },
+    {
+      "id": 13,
+      "scene": 5,
+      "text": "Readers can request translation or speech in English, German, Turkish, Arabic and Spanish.",
+      "file": "voice-13.wav",
+      "audio_duration": 6.92225,
+      "duration": 7.208333333333333,
+      "audio_path": "/private/tmp/kiez-video/render/audio-13.wav"
+    },
+    {
+      "id": 14,
+      "scene": 5,
+      "text": "Gemini supports these language and voice features; OpenAI powers Chronicle extraction, writing and review.",
+      "file": "voice-14.wav",
+      "audio_duration": 8.381083333333333,
+      "duration": 8.666666666666666,
+      "audio_path": "/private/tmp/kiez-video/render/audio-14.wav"
+    },
+    {
+      "id": 15,
+      "scene": 6,
+      "text": "The prototype covers four Berlin neighborhoods and Hamburg\u2019s HafenCity.",
+      "file": "voice-15.wav",
+      "audio_duration": 5.257416666666667,
+      "duration": 5.541666666666667,
+      "audio_path": "/private/tmp/kiez-video/render/audio-15.wav"
+    },
+    {
+      "id": 16,
+      "scene": 6,
+      "text": "The demo archive contains labeled editorial stories; live Chronicle generation has been rehearsed, with grounding and daily scheduling still to improve.",
+      "file": "voice-16.wav",
+      "audio_duration": 10.73275,
+      "duration": 11.0,
+      "audio_path": "/private/tmp/kiez-video/render/audio-16.wav"
+    },
+    {
+      "id": 17,
+      "scene": 6,
+      "text": "Kiez Notes brings together a changing present and a shared memory. Explore the project, and imagine what story your neighborhood could tell.",
+      "file": "voice-17.wav",
+      "audio_duration": 11.464583333333334,
+      "duration": 15.5,
+      "audio_path": "/private/tmp/kiez-video/render/audio-17.wav"
+    }
+  ]
+}
