@@ -1,0 +1,1 @@
+export default function Loading(){return <main id="main" className="archive-page" aria-busy="true"><p className="eyebrow">OPENING THE DIARY…</p><div className="skeleton" style={{height:300}}/></main>;}
