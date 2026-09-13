@@ -46,3 +46,12 @@ test('database retains concurrent entries, seeds idempotently, and atomically cl
  await database.close();
 });
 test('Google PCM is wrapped in a playable mono WAV header',()=>{const audio=pcmToWav(Buffer.from([1,2,3,4]));assert.equal(audio.toString('ascii',0,4),'RIFF');assert.equal(audio.toString('ascii',8,12),'WAVE');assert.equal(audio.readUInt32LE(24),24000);assert.equal(audio.readUInt32LE(40),4);assert.equal(audio.length,48);});
+
+test('Hamburg presentation venue resolves with realistic accuracy, outside area stays blocked', () => {
+ const venue = resolveLocation(53.54057, 9.99437, 100);
+ assert.equal(venue.status, 'resolved');
+ if (venue.status === 'resolved') assert.equal(venue.neighborhood.id, 'hafencity');
+ assert.equal(resolveLocation(53.54057, 9.99437, 300).status, 'uncertain');
+ assert.equal(resolveLocation(53.55, 9.99437, 10).status, 'outside');
+ assert.ok(neighborhoods.find(n => n.id === 'hafencity')?.aliases.includes('20457'));
+});

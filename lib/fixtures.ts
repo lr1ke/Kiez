@@ -56,7 +56,8 @@ const days: { title: string; entries: [SourceLanguage,string][]; story: string }
 ];
 const names = ['Leni','Deniz','Sam','نور','Lucía','Mika','Ece','Alex'];
 export function makeFixtures(anchor: string) {
- return neighborhoods.flatMap((n, ni) => Array.from({length:5},(_,offset) => {
+ // Keep the original Berlin fixtures stable; HafenCity begins with real contributions.
+ return neighborhoods.filter(n => n.id !== 'hafencity').flatMap((n, ni) => Array.from({length:5},(_,offset) => {
   const day = days[(offset+ni)%days.length], date = shiftDate(anchor,-offset);
   const entries = day.entries.map(([language,body],i) => ({ id:`demo-v1-${anchor}-${n.id}-${offset}-${i}`, neighborhood_id:n.id, nickname:names[(i+ni)%names.length], body, language, input_mode:'text' as const,
    // Current-day fixtures occupy the first seconds of the Berlin day, so live posts always supersede them.

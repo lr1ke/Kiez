@@ -1,4 +1,4 @@
-# Tomorrow’s hackathon priorities
+# Hackathon priorities — updated 2026-09-13
 
 Keep this a hackathon MVP: finish and rehearse the demo before adding scope.
 
@@ -11,6 +11,14 @@ Keep this a hackathon MVP: finish and rehearse the demo before adding scope.
 
 ## Current status
 
-The local map, diary, archive, seeded multilingual content and location-checked text submission work. There are four Kieze, 160 fictional contributions and 16 editorial demo Chronicles. Google integration code exists, but real speech/translation/generation still needs credentials and live validation. Hosted PostgreSQL, scheduling and public deployment are not connected.
+- Both provider keys are configured locally. Never copy their values into notes or source control.
+- OpenAI Chronicle extraction → writing → review completed with `gpt-4.1` on eight fictional contributions. Output: `.data/chronicle-rehearsal.md`. Not published. Manual review found unsupported chronology despite automated review passing; refine before presenting it as fully grounded.
+- Gemini translation → German TTS → transcription passed live; transcription matched the generated sentence exactly. The user listened to and approved the audio. Browser microphone and the remaining languages still need rehearsal. Audio latency is deferred.
+- Google rejected `gemini-2.5-flash` for this new user. Local text/transcription settings now use `gemini-3.6-flash`; TTS remains `gemini-2.5-flash-preview-tts`, voice `Kore`.
+- Demo refreshed to Berlin date 2026-09-13, preserving real contributions. Verified eight current-day entries and four archive days in each of four Kieze. Archive stories remain editorial fixtures.
+- Production Webpack build passed on 2026-09-13. Local app restarted at http://localhost:3000.
+- Hosted PostgreSQL, scheduler and deployment remain unconnected. No `DATABASE_URL` or deployment secrets are configured. User chose Supabase for hosted PostgreSQL. Project connection URI is still needed; app host remains undecided.
+
+Next: connect hosted PostgreSQL using the existing adapter, prepare a preview deployment, then rehearse the complete flow over HTTPS. Do not describe the provider smoke tests as complete multilingual browser validation.
 
 Use `README.md` for commands and `AGENTS.md` for the detailed handoff. Local environment files and credential-file patterns are excluded by `.gitignore`; `.env.example` intentionally contains only safe configuration examples. Ignoring files does not remove previously tracked secrets.
