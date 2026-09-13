@@ -2,6 +2,7 @@ import { randomUUID } from 'node:crypto';
 import { db } from './db';
 import { diaryDate } from './dates';
 import { createChronicle } from './ai';
+import { chronicleModel } from './openai';
 import type { Contribution } from './types';
 export async function runChronicles() {
  const d=await db();
@@ -17,7 +18,7 @@ export async function runChronicles() {
    let draft; for(let attempt=0;attempt<2;attempt++){try{draft=await createChronicle(entries);break;}catch(error){if(attempt===1)throw error;}}
    if(!draft) throw new Error('No draft');
    // Publication checks that no source was removed while generation ran.
-   const result=await d.query(`UPDATE chronicles SET body=$3,title=$4,coverage=$5,source_ids=$6,contribution_count=$7,model=$8,prompt_version='chronicle-v1',status='published',generated_at=now(),published_at=now(),last_error=NULL WHERE id=$1 AND claim_token=$2 AND status='generating' AND NOT EXISTS(SELECT 1 FROM contributions WHERE id IN (SELECT jsonb_array_elements_text($6::jsonb)) AND visibility<>'visible') RETURNING id`,[id,token,draft.body,draft.title,JSON.stringify(draft.coverage),JSON.stringify(entries.map(e=>e.id)),entries.length,process.env.GEMINI_TEXT_MODEL||'gemini-2.5-flash']);
+   const result=await d.query(`UPDATE chronicles SET body=$3,title=$4,coverage=$5,source_ids=$6,contribution_count=$7,model=$8,prompt_version='chronicle-v1',status='published',generated_at=now(),published_at=now(),last_error=NULL WHERE id=$1 AND claim_token=$2 AND status='generating' AND NOT EXISTS(SELECT 1 FROM contributions WHERE id IN (SELECT jsonb_array_elements_text($6::jsonb)) AND visibility<>'visible') RETURNING id`,[id,token,draft.body,draft.title,JSON.stringify(draft.coverage),JSON.stringify(entries.map(e=>e.id)),entries.length,chronicleModel()]);
    if(!result.rows.length) throw new Error('Source changed');published++;
   }catch {await d.query("UPDATE chronicles SET status='failed',last_error='Generation or source review failed; retry available.' WHERE id=$1 AND claim_token=$2 AND status='generating'",[id,token]);failed++;}
  }
