@@ -37,7 +37,7 @@ async function handle(request:NextRequest,method:string) {
  if(action==='location'){
   const input=z.object({latitude:z.number().min(-90).max(90),longitude:z.number().min(-180).max(180),accuracy:z.number().positive().max(50000)}).parse(await body(request));
   const result=resolveLocation(input.latitude,input.longitude,input.accuracy);
-  if(result.status==='outside')throw new HttpError(422,'You are outside the supported diary areas. You can still explore every Kiez.');
+  if(result.status==='outside')throw new HttpError(422,'You are outside the supported neighborhood areas. You can still explore every Kiez.');
   if(result.status==='uncertain')throw new HttpError(422,'Your location is too uncertain near a boundary. Move into the area and try again.');
   return json({neighborhood:result.neighborhood,token:sign({sid,kiez:result.neighborhood.id,exp:Date.now()+5*60000})});
  }
