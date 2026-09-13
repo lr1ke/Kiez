@@ -19,13 +19,16 @@ async function connect():Promise<Database> {
   const local = new PGlite(dataPath);
   database={query:async<T>(sql:string,params?:unknown[])=>local.query<T>(sql,params)};
  }
+ // Hosted schema/demo setup is run explicitly with the seed CLI before deployment.
+ // A serverless cold start should only connect, not repeat hundreds of seed writes.
+ if(process.env.VERCEL) return database;
  const migration=await readFile(path.join(process.cwd(),'migrations/001_initial.sql'),'utf8');
  for(const statement of migration.split(';').map(s=>s.trim()).filter(Boolean)) await database.query(statement);
  for(const n of neighborhoods) await database.query('INSERT INTO neighborhoods(id,name,aliases,geometry,boundary_version) VALUES($1,$2,$3,$4,$5) ON CONFLICT(id) DO UPDATE SET name=$2,aliases=$3,geometry=$4,boundary_version=$5',[n.id,n.name,JSON.stringify(n.aliases),JSON.stringify(n.geometry),boundaryVersion]);
  if(process.env.DEMO_DATA!=='false') {
   const existing=await database.query<{value:string}>("SELECT value FROM settings WHERE key='demo-anchor'");
   const anchor=existing.rows[0]?.value || process.env.DEMO_ANCHOR_DATE || diaryDate();
-  await seed(database,anchor);
+  if(!existing.rows.length) await seed(database,anchor);
  }
  return database;
 }

@@ -59,7 +59,7 @@ Set `CRON_SECRET`, then have a scheduler call `GET /api/cron` with `Authorizatio
 
 ## Optional deployment
 
-Use a Node-compatible Next.js host. Set `DATABASE_URL` to managed PostgreSQL and configure `SESSION_SECRET`, `CRON_SECRET`, `ADMIN_SECRET`, and the OpenAI and Google variables. Generate independent secrets using `openssl rand -hex 32`. The schema in `migrations/001_initial.sql` is applied at startup. Use `npm run build` and `npm start`; this is a server app, not a static export. Embedded storage is for a single local process and is rejected on Vercel.
+Use a Node-compatible Next.js host. Set `DATABASE_URL` to managed PostgreSQL and configure `SESSION_SECRET`, `CRON_SECRET`, `ADMIN_SECRET`, and the OpenAI and Google variables. Generate independent secrets using `openssl rand -hex 32`. Run the seed CLI against the hosted database before deploying to Vercel: Vercel requests only connect and read/write app data. Local startup applies `migrations/001_initial.sql`; automatic seeding runs only when no demo anchor exists. Use `npm run build` and `npm start`; this is a server app, not a static export. Embedded storage is for a single local process and is rejected on Vercel.
 
 A report button records a contribution flag. Internal operations `GET /api/admin/reports` and `POST /api/admin/remove` (JSON `{ "id": "contribution-id" }`) require `Authorization: Bearer <ADMIN_SECRET>`. Removing a source hides it and places affected Chronicles under review. There is no admin dashboard in this MVP.
 

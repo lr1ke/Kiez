@@ -20,3 +20,12 @@ CREATE TABLE IF NOT EXISTS chronicles (
 CREATE TABLE IF NOT EXISTS reports (id text PRIMARY KEY, contribution_id text NOT NULL REFERENCES contributions(id), session_id text NOT NULL REFERENCES sessions(id), created_at timestamptz NOT NULL DEFAULT now(), UNIQUE(contribution_id,session_id));
 CREATE TABLE IF NOT EXISTS rate_limits (key text PRIMARY KEY, hits integer NOT NULL, expires_at timestamptz NOT NULL);
 CREATE TABLE IF NOT EXISTS settings (key text PRIMARY KEY, value text NOT NULL);
+
+-- Access goes through the server database owner. No browser-role policies.
+ALTER TABLE neighborhoods ENABLE ROW LEVEL SECURITY;
+ALTER TABLE sessions ENABLE ROW LEVEL SECURITY;
+ALTER TABLE contributions ENABLE ROW LEVEL SECURITY;
+ALTER TABLE chronicles ENABLE ROW LEVEL SECURITY;
+ALTER TABLE reports ENABLE ROW LEVEL SECURITY;
+ALTER TABLE rate_limits ENABLE ROW LEVEL SECURITY;
+ALTER TABLE settings ENABLE ROW LEVEL SECURITY;

@@ -13,3 +13,4 @@ secrets/
 *.key
 *service-account*.json
 google-credentials*.json
+.vercel

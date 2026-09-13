@@ -22,3 +22,15 @@ Keep this a hackathon MVP: finish and rehearse the demo before adding scope.
 Next: connect hosted PostgreSQL using the existing adapter, prepare a preview deployment, then rehearse the complete flow over HTTPS. Do not describe the provider smoke tests as complete multilingual browser validation.
 
 Use `README.md` for commands and `AGENTS.md` for the detailed handoff. Local environment files and credential-file patterns are excluded by `.gitignore`; `.env.example` intentionally contains only safe configuration examples. Ignoring files does not remove previously tracked secrets.
+
+## Supabase connection completed
+
+Supabase configured in local DATABASE_URL. Password URL encoding fixed locally; TLS uses sslmode=require with libpq compatibility (encryption without certificate identity verification). Schema and demo records initialized; fresh connection verified 5 areas, 160 contributions and 16 editorial fixture Chronicles. Row-level security enabled on all seven diary tables with no browser policies; verified anon sees zero contributions while server sees 160. App restarted with Supabase. Eight tests passed. Local PGlite data remains untouched and was not transferred. Hosting, scheduler and a hosted location-checked submission rehearsal remain outstanding.
+
+## Vercel production repaired
+
+CLI linked to existing project kiez. Production DATABASE_URL replaced securely with tested local credentials using transaction pooler port 6543. Existing sensitive variable update failed in CLI, so production variable was removed and re-added. Deployed local source successfully to https://kiez-ten.vercel.app/ (deployment dpl_FdjyYTL2UVWeeTftyzz49vnxiLwK). Live checks passed: landing page and HafenCity server rendering, API returns five areas, eight current-day entries in each Berlin area and zero in HafenCity. First live request was slow; startup currently reapplies schema and loops through demo seed on each new connection/process. Preview database secret was not repaired. Phone microphone/location, hosted publication, remaining language quality, and scheduler still need rehearsal/setup.
+
+## Page speed and deployed Google repaired
+
+Vercel requests now skip schema/seed initialization; run seed CLI against hosted DB before deployments needing schema changes. Local auto-seed skips existing anchors. Function region set to dub1 beside Supabase eu-west-1. Landing response measured 0.923 seconds (single HTTP check, not full browser load). Production Google settings synchronized; logs exposed a 404 for gemini-2.5-flash. Restored gemini-3.6-flash for text/transcription in local env, example, code defaults and production. Live German translation passed in 6.747s and translation+speech in 9.352s. Deployment dpl_7MmDL4rqVpJWNMwstCHnvTudBdyi at https://kiez-ten.vercel.app/. Typecheck, eight tests and remote build passed. Changes remain uncommitted; preserve them before next Git-based deployment.
